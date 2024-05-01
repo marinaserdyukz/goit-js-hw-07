@@ -19,14 +19,16 @@ buttonDestroy.addEventListener("click", () => {
 });
 
 function createBoxes(amount) {
+  const fragment = document.createDocumentFragment();
   for (let i = 0; i < amount; i++) {
     const box = document.createElement("div");
     box.style.width = `${30 + i * 10}px`;
     box.style.height = `${30 + i * 10}px`;
     box.style.backgroundColor = getRandomHexColor();
     box.style.marginBottom = "10px";
-    boxesDiv.appendChild(box);
+    fragment.appendChild(box);
   }
+  boxesDiv.appendChild(fragment);
 }
 
 function destroyBoxes() {
