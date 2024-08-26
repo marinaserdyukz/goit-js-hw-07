@@ -9,6 +9,7 @@ function getRandomHexColor() {
       .toString(16)
       .padStart(6, 0)}`;
   }
+  
   const newColor = getRandomHexColor();
   document.body.style.backgroundColor = newColor;
 
