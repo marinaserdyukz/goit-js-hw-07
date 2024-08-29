@@ -34,7 +34,9 @@ for(let i = 0; i < amount; i++){
     box.style.backgroundColor = getRandomHexColor()
     fragment.appendChild(box)
 }
+
 containerElem.appendChild(fragment);
+
     }
 
     btnDestroyElem.addEventListener("click", () => {

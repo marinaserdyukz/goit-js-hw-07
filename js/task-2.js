@@ -29,17 +29,17 @@ const images = [
 
 const ulElem = document.querySelector('.gallery');
 
-images.forEach((image) => {
+for(let i = 0; i<images.length; i++) {
     const liElem = document.createElement('li');
     const imgElem = document.createElement('img');
-    imgElem.setAttribute ("src", image.url)
-    imgElem.setAttribute ("alt", image.alt)
+    imgElem.setAttribute ("src", images[i].url)
+    imgElem.setAttribute ("alt", images[i].alt)
 
     imgElem.classList.add("galleryItem")
     ulElem.append(liElem)
     liElem.append(imgElem)
 
-})
+}
 
 
 
