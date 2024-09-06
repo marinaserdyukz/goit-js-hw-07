@@ -27,28 +27,15 @@ const images = [
     
 
 
-const ulElem = document.querySelector('.gallery');
-
-//for(let i = 0; i<images.length; i++) {
-  //  const liElem = document.createElement('li');
-    //const imgElem = document.createElement('img');
-    //imgElem.setAttribute ("src", images[i].url)
-    //imgElem.setAttribute ("alt", images[i].alt)
-
-    //imgElem.classList.add("galleryItem")
-    //ulElem.append(liElem)
-    //liElem.append(imgElem)
-
-    //ulElem.insertAdjacentHTML("afterbegin", liElem);
-//}
-
-for(let i = 0; i<images.length; i++) {
-
-    const liHTML = `<li><img src="${images[i].url}" alt="${images[i].alt}" class="galleryItem"></li>`;
-    ulElem.insertAdjacentHTML('beforeend', liHTML);
-}
+const gallery = document.querySelector('.gallery');
+const galleryItems = images
+  .map(image => 
+    `<li><img src="${image.url}" alt="${image.alt}" class="galleryItem"></li>`
+  )
+  .join('');
 
 
+gallery.insertAdjacentHTML('beforeend', galleryItems);
 
 
 
